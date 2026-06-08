@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="500" viewBox="0 0 850 500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap');
+      
+      .bg { fill: #1e1e1e; }
+      .title-bar { fill: #000000; }
+      .address-bar { fill: #2d2d2d; rx: 6; }
+      .sidebar { fill: #181818; }
+      .text-light { fill: #cccccc; font-family: 'Poppins', 'Segoe UI', sans-serif; }
+      .text-muted { fill: #888888; font-family: 'Poppins', 'Segoe UI', sans-serif; }
+      .text-title { fill: #ffffff; font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 13px; font-weight: 600; }
+      
+      .folder { transition: fill 0.3s; }
+      .file-blue { fill: #3498DB; rx: 4; transition: fill 0.3s; }
+      .file-red { fill: #E74C3C; rx: 4; transition: fill 0.3s; }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
+        100% { transform: translateY(0px); }
+      }
+      .anim-float { animation: float 3s ease-in-out infinite; }
+      .anim-float-1 { animation: float 3s ease-in-out infinite; animation-delay: 0.5s; }
+      .anim-float-2 { animation: float 3s ease-in-out infinite; animation-delay: 1s; }
+      .anim-float-3 { animation: float 3s ease-in-out infinite; animation-delay: 1.5s; }
+      
+      /* Interactivity */
+      .interactive { cursor: pointer; }
+      .interactive:hover .text-light { fill: #ffffff; font-weight: 800; }
+      .interactive:hover .folder { filter: brightness(1.2); }
+      .interactive:hover .file-blue { fill: #5DADE2; }
+      .interactive:hover .file-red { fill: #EC7063; }
+      .interactive:hover rect { filter: brightness(1.2); }
+      
+      .sidebar-item { cursor: pointer; transition: fill 0.2s; }
+      .sidebar-item:hover { fill: #ffffff; font-weight: 800; }
+      
+      .btn-nav { cursor: pointer; transition: stroke 0.2s; }
+      .btn-nav:hover { stroke: #ffffff; }
+      
+      .btn-close { cursor: pointer; transition: stroke 0.2s; }
+      .btn-close:hover { stroke: #ff4444; }
+    </style>
+  </defs>
+
+  <!-- Window Border and Background -->
+  <rect width="850" height="500" rx="10" fill="#333333" />
+  <rect x="1" y="1" width="848" height="498" rx="9" class="bg" />
+  
+  <!-- Title Bar -->
+  <path d="M 1 10 A 9 9 0 0 1 10 1 L 840 1 A 9 9 0 0 1 849 10 L 849 32 L 1 32 Z" class="title-bar" />
+  
+  <!-- App Icon & Title -->
+  <text x="15" y="21" class="text-title">📁 File Explorer - Digital Realm</text>
+  
+  <!-- Window Controls -->
+  <line x1="750" y1="16" x2="762" y2="16" stroke="#cccccc" stroke-width="1.5" class="btn-nav" />
+  <rect x="780" y="10" width="12" height="12" fill="none" stroke="#cccccc" stroke-width="1.5" class="btn-nav" />
+  <path d="M815 10 L827 22 M827 10 L815 22" stroke="#cccccc" stroke-width="1.5" class="btn-close" />
+
+  <!-- Navigation Area -->
+  <rect x="1" y="32" width="848" height="45" class="bg" />
+  <line x1="1" y1="77" x2="849" y2="77" stroke="#333333" stroke-width="1" />
+  
+  <!-- Back/Forward/Up Arrows -->
+  <path d="M25 55 L15 60 L25 65" fill="none" stroke="#cccccc" stroke-width="1.5" stroke-linecap="round" class="btn-nav" />
+  <path d="M45 55 L55 60 L45 65" fill="none" stroke="#666666" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M75 57 L75 65 M75 57 L71 61 M75 57 L79 61" fill="none" stroke="#cccccc" stroke-width="1.5" stroke-linecap="round" class="btn-nav" />
+
+  <!-- Address Bar -->
+  <rect x="100" y="42" width="550" height="26" class="address-bar" />
+  <text x="115" y="60" class="text-light" font-size="12">C:\Users\Player1\Desktop\My_Tech_Stack</text>
+
+  <!-- Search Bar -->
+  <rect x="665" y="42" width="170" height="26" class="address-bar" />
+  <text x="675" y="60" class="text-muted" font-size="12">Search...</text>
+
+  <!-- Sidebar -->
+  <rect x="1" y="78" width="180" height="421" class="sidebar" />
+  <line x1="181" y1="78" x2="181" y2="499" stroke="#333333" stroke-width="1" />
+
+  <!-- Sidebar Items -->
+  <text x="20" y="110" class="text-light" font-size="13" font-weight="600">⭐ Quick access</text>
+  <a href="#languages"><text x="40" y="135" class="text-light sidebar-item" font-size="12">📂 Languages</text></a>
+  <a href="#frameworks"><text x="40" y="160" class="text-light sidebar-item" font-size="12">📂 Frameworks</text></a>
+  <a href="#databases"><text x="40" y="185" class="text-light sidebar-item" font-size="12">🗄️ Databases</text></a>
+  <a href="#mldl"><text x="40" y="210" class="text-light sidebar-item" font-size="12">🧠 ML &amp; DL</text></a>
+
+  <text x="20" y="250" class="text-light" font-size="13" font-weight="600">💻 This PC</text>
+  <a href="#"><text x="40" y="275" class="text-light sidebar-item" font-size="12">🎵 Audio</text></a>
+  <a href="#"><text x="40" y="300" class="text-light sidebar-item" font-size="12">🖼️ Images</text></a>
+  <a href="#"><text x="40" y="325" class="text-light sidebar-item" font-size="12">💿 Local Disk (C:)</text></a>
+
+  <!-- Main Content Area -->
+  <text x="210" y="120" class="text-light" font-size="18" font-weight="600">Languages &amp; Stats</text>
+  <line x1="210" y1="135" x2="820" y2="135" stroke="#333333" stroke-width="1" />
+
+  <!-- Items Grid (Outer G for positioning, Inner G for animation, A for interaction) -->
+  
+  <!-- 1. Languages Folder -->
+  <g transform="translate(210, 155)">
+    <g class="anim-float">
+      <a href="#languages" target="_self" class="interactive">
+        <path d="M0 6 L18 6 L24 16 L70 16 L70 56 L0 56 Z" class="folder" fill="#3498DB" />
+        <text x="85" y="28" class="text-light" font-size="14" font-weight="600">Languages.sys</text>
+        <text x="85" y="48" class="text-muted" font-size="12">Python, JS, Java...</text>
+      </a>
+    </g>
+  </g>
+
+  <!-- 2. Frameworks Folder -->
+  <g transform="translate(500, 155)">
+    <g class="anim-float-1">
+      <a href="#frameworks" target="_self" class="interactive">
+        <path d="M0 6 L18 6 L24 16 L70 16 L70 56 L0 56 Z" class="folder" fill="#E67E22" />
+        <text x="85" y="28" class="text-light" font-size="14" font-weight="600">Frameworks.lib</text>
+        <text x="85" y="48" class="text-muted" font-size="12">React, Node, Flutter...</text>
+      </a>
+    </g>
+  </g>
+
+  <!-- 3. Databases -->
+  <g transform="translate(210, 235)">
+    <g class="anim-float-2">
+      <a href="#databases" target="_self" class="interactive">
+        <rect x="0" y="5" width="50" height="55" rx="4" fill="#F1C40F" />
+        <line x1="10" y1="20" x2="40" y2="20" stroke="#fff" stroke-width="3" />
+        <line x1="10" y1="35" x2="40" y2="35" stroke="#fff" stroke-width="3" />
+        <line x1="10" y1="50" x2="40" y2="50" stroke="#fff" stroke-width="3" />
+        <text x="85" y="28" class="text-light" font-size="14" font-weight="600">Databases.db</text>
+        <text x="85" y="48" class="text-muted" font-size="12">MySQL, Firebase</text>
+      </a>
+    </g>
+  </g>
+
+  <!-- 4. ML/DL -->
+  <g transform="translate(500, 235)">
+    <g class="anim-float-3">
+      <a href="#mldl" target="_self" class="interactive">
+        <rect x="0" y="5" width="50" height="55" rx="4" fill="#9B59B6" />
+        <circle cx="25" cy="32" r="10" fill="none" stroke="#fff" stroke-width="3" />
+        <line x1="25" y1="12" x2="25" y2="22" stroke="#fff" stroke-width="3" />
+        <text x="85" y="28" class="text-light" font-size="14" font-weight="600">MachineLearning.exe</text>
+        <text x="85" y="48" class="text-muted" font-size="12">TensorFlow, PyTorch...</text>
+      </a>
+    </g>
+  </g>
+
+  <!-- 5. Coffee File -->
+  <g transform="translate(210, 315)">
+    <g class="anim-float">
+      <a href="#" target="_blank" class="interactive">
+        <rect x="0" y="0" width="55" height="60" class="file-blue" />
+        <path d="M12 22 L43 22 M12 34 L30 34 M12 46 L38 46" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+        <text x="85" y="28" class="text-light" font-size="14" font-weight="600">Coffee.log</text>
+        <text x="85" y="48" class="text-muted" font-size="12">Value: ∞ (Infinite)</text>
+      </a>
+    </g>
+  </g>
+
+  <!-- 6. Quest File -->
+  <g transform="translate(500, 315)">
+    <g class="anim-float-1">
+      <a href="#" target="_blank" class="interactive">
+        <rect x="0" y="0" width="55" height="60" class="file-red" />
+        <path d="M12 22 L43 22 M12 34 L30 34 M12 46 L38 46" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+        <text x="85" y="28" class="text-light" font-size="14" font-weight="600">CurrentQuest.md</text>
+        <text x="85" y="48" class="text-muted" font-size="12">Status: In Progress...</text>
+      </a>
+    </g>
+  </g>
+
+  <text x="210" y="405" class="text-light" font-size="14" font-weight="600">Preview: CurrentQuest.md</text>
+  <rect x="210" y="415" width="610" height="50" rx="4" fill="#252525" stroke="#333" stroke-width="1" />
+  <text x="225" y="437" class="text-light" font-size="12">"Exploring the outer limits of web development, building epic portfolios,</text>
+  <text x="225" y="455" class="text-light" font-size="12">and mastering the arcane arts of HTML, CSS, and JavaScript."</text>
+
+</svg>
