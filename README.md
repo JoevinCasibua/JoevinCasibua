@@ -9,12 +9,6 @@
 ### 🚀 Welcome to my digital realm! 
 I'm a developer who crafts interactive experiences, levels up daily, and conquers bugs in the matrix.
 
-<br>
-
-<!-- ANIMATED START BUTTON -->
-<a href="#">
-  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=20&pause=1000&color=8E2DE2&background=0F0F1B&center=true&vCenter=true&width=300&lines=%5B+PRESS+START+%5D" alt="Press Start" />
-</a>
 
 <br><br><br>
 
